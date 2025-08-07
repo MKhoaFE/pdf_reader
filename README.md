@@ -6,22 +6,7 @@ Python to convert PDF to image(s)
 React + Tesseract.js and Python to OCR the images
 ----------------------
 Source project:
-src/
-├── App.jsx
-├── App.css
-├── pdf2img.py
-├── output_images
-├── src
-    ├── assets
-    ├── components/
-        ├── HeaderComponents
-        ├── footer.jsx
-        ├── loading.jsx
-        ├── orcResult.jsx
-        ├── uploadPDF.jsx
-    ├── orc/
-        ├── tesseract.jsx
-├── README.md     
+<pre lang="md"> <code>```bash src/ ├── App.jsx ├── App.css ├── pdf2img.py ├── output_images/ ├── src/ │ ├── assets/ │ ├── components/ │ │ ├── HeaderComponents/ │ │ ├── footer.jsx │ │ ├── loading.jsx │ │ ├── orcResult.jsx │ │ ├── uploadPDF.jsx │ │ └── tesseract.jsx ├── README.md ```</code> </pre>   
 ---------------------
 REQUIREMENTS:
 
