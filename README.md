@@ -1,70 +1,58 @@
-# Getting Started with Create React App
+OCR Claim Form Project
+This project extracts text content from scanned PDF forms (e.g., insurance claim forms) using:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Python to convert PDF to image(s)
 
-## Available Scripts
+React + Tesseract.js and Python to OCR the images
+----------------------
+Source project:
+src/
+├── App.jsx
+├── App.css
+├── pdf2img.py
+├── output_images
+├── src
+    ├── assets
+    ├── components/
+        ├── HeaderComponents
+        ├── footer.jsx
+        ├── loading.jsx
+        ├── orcResult.jsx
+        ├── uploadPDF.jsx
+    ├── orc/
+        ├── tesseract.jsx
+├── README.md     
+---------------------
+REQUIREMENTS:
 
-In the project directory, you can run:
+Python (for PDF → image conversion)
+    Python 3.10+
+    pip packages:
+    pdf2image
+    External:
+    Poppler (required for pdf2image on Windows)
 
-### `npm start`
+React (for OCR processing)
+    Node.js v16 or v18
+    npm or yarn
+    tesseract.js (client-side OCR engine)
+    Mui
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Installation:
+1. pip install pdf2image
+2. download poppler
+https://github.com/oschwartz10612/poppler-windows/releases/ 
+and copy the PATH to bin folder and paste to "POPPLER_PATH" like: POPPLER_PATH = r"C:\Users\<your_name>\poppler-24.08.0\Library\bin"
+3. npm install
+4. npm start
 
-### `npm test`
+to convert PDF to images, run command:
+5. python pdf2img.py 
+the code will convert file "claimForm.pdf" to images at output_images folder
+then go on website and upload all that images to convert to text and can download the file .txt of image after converted.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

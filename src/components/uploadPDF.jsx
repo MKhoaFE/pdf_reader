@@ -1,30 +1,3 @@
-// import React from 'react';
-// import { Button, Typography } from '@mui/material';
-
-// function UploadPDF({ onFileSelect }) {
-//   const handleChange = (e) => {
-//     const file = e.target.files[0];
-//     if (file) {
-//       onFileSelect(file);
-//     }
-//   };
-
-//   return (
-//     <div style={{ padding: '20px' }}>
-//       <Typography variant="h6">Chọn file PDF hoặc ảnh:</Typography>
-//       <input
-//         type="file"
-//         accept="application/pdf,image/*"
-//         onChange={handleChange}
-//         style={{ marginTop: '10px' }}
-//       />
-//     </div>
-//   );
-// }
-
-// export default UploadPDF;
-
-// components/uploadPDF.jsx
 import React, { useState } from 'react';
 import { runOCR } from '../ocr/tesseract';
 
